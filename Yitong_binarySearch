@@ -49,7 +49,8 @@ if(low<=high){
 }
  
 }
-
+else
+return -1;
 
 
 }
