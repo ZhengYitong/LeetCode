@@ -1,0 +1,56 @@
+//int[]a={1,2,2,2,4,8,10} order by asc
+//return array id
+
+//1. search a given key  -iterated
+public void binarySearch(int[] a, int low,int high, int key){
+ //assume having n+1 numbers 
+if(low<=high){
+
+ while(low<=high){
+
+ int mid=(low+high)/2;
+ if(a[mid]==key)
+ return mid;
+ else if(a[mid]>key) 
+ return binarySearch(int[] a,int low,int mid-1,int key);
+ else if(a[mid]<key)
+ return binarySearch(int[] a,int mid+1,int high,int key);
+
+}
+ 
+}
+else 
+   return -1;
+
+
+}
+
+// -non-iterated
+
+public void binarySearch(int[] a, int n,int key){
+ //assume having n+1 numbers 
+if(low<=high){
+
+ int low=0; 
+ int high=n;
+ int mid;
+ while(low<=high){
+ mid=(low+high)/2;
+
+ if(a[mid]==key)
+ return mid;
+ 
+ else if(a[mid]>key) 
+ high=mid-1;
+
+ else if(a[mid]<key)
+ low=mid+1;
+
+}
+ 
+}
+
+
+
+}
+//search the key>=M,waiting..for 
